@@ -78,3 +78,64 @@ I successfully created and managed storage volumes using **Windows Disk Manageme
 **Figure 4:** Windows **File Explorer** displaying the completed **Megabyte Unit Storage (E:)**, **Gigabyte Unit Storage (F:)**, and **Terabyte (V:)** volumes, confirming that the newly configured storage is available to the operating system.
 
 <img width="1917" height="926" alt="04 – Create Disk Volumes of Different Sizes" src="https://github.com/user-attachments/assets/17ba52bb-33fa-4321-ac31-a630df648545" />
+
+# Exercise 2 - Measure Network Throughput
+
+## Objective
+
+Capture and analyse network traffic using **Wireshark** to understand how network throughput is measured and identify the average data transfer rate of traffic passing through the Windows 11 workstation.
+
+---
+
+## Implementation
+
+I used **Wireshark** on the Windows 11 workstation to capture live network traffic from the **Ethernet0** interface. During the capture, I generated network activity and observed multiple protocols, including **DNS**, **mDNS**, and **TCP**, allowing me to see how different types of traffic were represented within a packet capture.
+
+I then applied the **HTTP display filter** to isolate HTTP traffic from the wider capture. This made it easier to inspect HTTP communication and identify a successful **HTTP/1.1 200 OK** response within the captured packets.
+
+Finally, I reviewed the **Capture File Properties** to examine statistics from the network capture. The capture contained **35,653 packets** over approximately **90.8 seconds**, with an average throughput of approximately **350 kB/s** or **2,801 kbit/s**. This allowed me to compare network data rates measured in **bytes per second** and **bits per second** using real captured traffic.
+
+---
+
+## Navigation
+
+```text
+Wireshark
+  ↳ Ethernet0
+      ↳ Start Packet Capture
+          ↳ Generate Network Traffic
+              ↳ Stop Packet Capture
+
+Display Filter
+  ↳ http
+      ↳ Apply Filter
+          ↳ Identify HTTP/1.1 200 OK
+
+Statistics
+  ↳ Capture File Properties
+      ↳ Review Capture Statistics
+          ↳ Average bytes/s
+          ↳ Average bits/s
+```
+
+---
+
+## Outcome
+
+I successfully captured and analysed live network traffic using **Wireshark**, filtered the capture to examine **HTTP traffic**, and identified a successful **HTTP/1.1 200 OK** response. I also used the capture statistics to measure an average network throughput of approximately **350 kB/s** or **2,801 kbit/s**. This exercise gave me practical experience with packet capture, protocol filtering, HTTP traffic analysis, and interpreting network throughput using **bytes per second** and **bits per second**.
+
+---
+
+## Screenshot
+
+**Figure 1:** **Wireshark** capturing live network traffic from the **Ethernet0** interface, displaying captured DNS, mDNS, and TCP packets.
+
+<img width="1918" height="927" alt="05 – Measure Network Throughput" src="https://github.com/user-attachments/assets/165f98b6-62bd-475a-b966-cd6d2cc06399" />
+
+**Figure 2:** **Wireshark** with the **HTTP display filter** applied and a successful **HTTP/1.1 200 OK** response selected for inspection.
+
+<img width="1917" height="927" alt="06 – Measure Network Throughput" src="https://github.com/user-attachments/assets/98afea65-73bf-48ce-baae-e02e58c97616" />
+
+**Figure 3:** **Wireshark Capture File Properties** displaying statistics for the Ethernet0 capture, including **35,653 captured packets** and an average throughput of approximately **350 kB/s** or **2,801 kbit/s**.
+
+<img width="1918" height="930" alt="07 – Measure Network Throughput" src="https://github.com/user-attachments/assets/461ae288-4c6d-4b95-8187-88542f6f275a" />
