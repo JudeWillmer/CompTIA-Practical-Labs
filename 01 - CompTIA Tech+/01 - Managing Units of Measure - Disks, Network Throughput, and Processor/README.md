@@ -139,3 +139,70 @@ I successfully captured and analysed live network traffic using **Wireshark**, f
 **Figure 3:** **Wireshark Capture File Properties** displaying statistics for the Ethernet0 capture, including **35,653 captured packets** and an average throughput of approximately **350 kB/s** or **2,801 kbit/s**.
 
 <img width="1918" height="930" alt="07 – Measure Network Throughput" src="https://github.com/user-attachments/assets/461ae288-4c6d-4b95-8187-88542f6f275a" />
+
+# Exercise 3 - Retrieve Processor System Information
+
+## Objective
+
+Retrieve and verify processor and system hardware information using **CPU-Z** and **Windows Settings**, including processor identification, clock speed, cores, threads, cache information, memory, and CPU benchmark performance.
+
+---
+
+## Implementation
+
+I used **CPU-Z** on the Windows 11 workstation to examine detailed processor and system hardware information. Using the **CPU** tab, I identified the installed **Intel Xeon Gold 6438M** processor and reviewed information including its approximately **2.20 GHz clock speed**, processor architecture, supported instruction sets, cache configuration, and the available **2 cores and 2 threads** within the lab environment.
+
+I explored additional CPU-Z hardware information and then used the **Bench** tab to evaluate processor performance. The benchmark produced a **single-thread score of 417.5** and a **multi-thread score of 1748.1**, with a **multi-thread ratio of 4.19**, providing practical experience with interpreting processor benchmark information.
+
+Finally, I opened **Windows Settings** and reviewed **System > About** to independently verify the processor and system information reported by CPU-Z. Windows identified the **Intel Xeon Gold 6438M at 2.20 GHz** and displayed **8 GB of installed RAM**, allowing me to compare information reported by a third-party diagnostic utility with the hardware information provided directly by Windows.
+
+---
+
+## Navigation
+
+```text
+CPU-Z
+  ↳ CPU
+      ↳ Review Processor Information
+          ↳ Processor Model
+          ↳ Clock Speed
+          ↳ Cores and Threads
+          ↳ Cache
+          ↳ Instruction Sets
+
+CPU-Z
+  ↳ Bench
+      ↳ Bench CPU
+          ↳ Review Single-Thread Score
+          ↳ Review Multi-Thread Score
+          ↳ Review Multi-Thread Ratio
+
+Windows Settings
+  ↳ System
+      ↳ About
+          ↳ Device Specifications
+              ↳ Verify Processor
+              ↳ Verify Installed RAM
+```
+
+---
+
+## Outcome
+
+I successfully retrieved and analysed processor information using **CPU-Z**, identifying the **Intel Xeon Gold 6438M**, its approximately **2.20 GHz clock speed**, available cores and threads, cache configuration, and supported instruction sets. I also used the CPU-Z benchmarking tool to record a **single-thread score of 417.5** and a **multi-thread score of 1748.1**. Finally, I verified the processor information through **Windows Settings**, confirming the processor model and **8 GB of installed RAM**. This exercise gave me practical experience using hardware diagnostic tools, interpreting processor specifications and benchmark results, and verifying system information across multiple utilities.
+
+---
+
+## Screenshot
+
+**Figure 1:** **CPU-Z CPU tab** displaying the **Intel Xeon Gold 6438M** processor and detailed information including clock speed, cores, threads, cache configuration, and supported instruction sets.
+
+<img width="1918" height="925" alt="08 – Retrieve Processor System Information" src="https://github.com/user-attachments/assets/172b024b-d36f-4d65-aad7-05a62e70b31f" />
+
+**Figure 2:** **CPU-Z Bench tab** displaying the completed processor benchmark with a **single-thread score of 417.5**, **multi-thread score of 1748.1**, and **multi-thread ratio of 4.19**.
+
+<img width="1918" height="926" alt="09 – Retrieve Processor System Information" src="https://github.com/user-attachments/assets/aee6e45e-a525-484d-82ec-54707d01d40f" />
+
+**Figure 3:** **Windows Settings > System > About** displaying the workstation device specifications, confirming the **Intel Xeon Gold 6438M 2.20 GHz** processor and **8 GB of installed RAM**.
+
+<img width="1918" height="930" alt="10 – Retrieve Processor System Information" src="https://github.com/user-attachments/assets/2b13d8fc-24f5-4c41-ad17-f5b503d061ed" />
