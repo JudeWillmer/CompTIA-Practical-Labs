@@ -199,7 +199,7 @@ I successfully retrieved and analysed processor information using **CPU-Z**, ide
 
 <img width="1918" height="925" alt="08 – Retrieve Processor System Information" src="https://github.com/user-attachments/assets/172b024b-d36f-4d65-aad7-05a62e70b31f" />
 
-**Figure 2:** **CPU-Z Bench tab** displaying the completed processor benchmark with a **single-thread score of 417.5**, **multi-thread score of 1748.1**, and **multi-thread ratio of 4.19**.
+**Figure 2:** **CPU-Z Bench tab** displaying processor benchmark results for the **Intel Xeon Gold 6438M**, demonstrating single-thread and multi-thread performance measurements.
 
 <img width="1918" height="926" alt="09 – Retrieve Processor System Information" src="https://github.com/user-attachments/assets/aee6e45e-a525-484d-82ec-54707d01d40f" />
 
