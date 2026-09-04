@@ -74,3 +74,87 @@ I successfully installed and managed network devices using **Windows Device Mana
 **Figure 3:** Windows **Device Manager** displaying the restored **Intel(R) 82574L Gigabit Network Connection** after scanning for hardware changes, demonstrating automatic device detection and restoration through Windows **Plug and Play**.
 
 <img width="1918" height="926" alt="03 – Installing Device Drivers" src="https://github.com/user-attachments/assets/874107d7-a062-45fa-a40c-02246709d429" />
+
+# Exercise 2 - Manage Windows Printing Services
+
+## Objective
+
+Install and configure local and network printers across Windows 11 and Windows Server, set up **Windows Print and Document Services**, manage shared printers through **Print Management**, connect a Windows 11 workstation to a server-hosted printer, and verify access through **IIS Internet Printing**.
+
+---
+
+## Implementation
+
+I first configured printer functionality within the Windows environment by installing the **Microsoft MS-XPS Class Driver 2** and working with printer sharing. On the Windows Server, I then configured a network printer using a **Standard TCP/IP Port** with the IP address `192.168.0.1` and shared the printer as **Printer1** so that it could be accessed by network clients.
+
+I used **Server Manager** on `ACIDC01` to install **Print and Document Services** and enabled the **Print Server**, **Internet Printing**, and **LPD Service** role services. This provided the server-side components required to centrally host and manage network printing services.
+
+After configuring the server roles, I used **Print Management** to verify the printers hosted on `ACIDC01` and review their queue status, driver information, and configuration. I then connected the Windows 11 workstation to the shared printer hosted on the server and confirmed that the network printer was successfully available to the client.
+
+Finally, I accessed the server's **IIS Internet Printing** interface from the Windows 11 workstation and verified that the shared printer was listed with a **Ready** status, confirming that the web-based printing interface was operational within the lab environment.
+
+---
+
+## Navigation
+
+```text
+Windows 11
+  ↳ Settings
+    ↳ Bluetooth & devices
+      ↳ Printers & scanners
+        ↳ Add device manually
+          ↳ Install Local Printer
+
+Windows Server
+  ↳ Printers & scanners
+    ↳ Add device manually
+      ↳ Standard TCP/IP Port
+        ↳ 192.168.0.1
+          ↳ Share as Printer1
+
+Server Manager
+  ↳ Add Roles and Features
+    ↳ Print and Document Services
+      ↳ Print Server
+      ↳ Internet Printing
+      ↳ LPD Service
+
+Server Manager
+  ↳ Tools
+    ↳ Print Management
+      ↳ Print Servers
+        ↳ ACIDC01
+          ↳ Printers
+
+Windows 11
+  ↳ Printers & scanners
+    ↳ Add device manually
+      ↳ Shared Printer
+        ↳ \\ACIDC01\Printer1
+
+Microsoft Edge
+  ↳ http://acidc01/printers/
+    ↳ Verify Shared Printer Ready
+```
+
+---
+
+## Outcome
+
+I successfully configured and managed printing services across Windows 11 and Windows Server, including local printer installation, TCP/IP printer configuration, printer sharing, and centralised print server administration. I also connected a Windows 11 workstation to a printer hosted on `ACIDC01` and verified the printer through both **Print Management** and **IIS Internet Printing**. This exercise gave me practical experience with Windows print services, network printer deployment, shared peripheral access, and server-based printer management.
+
+---
+
+## Screenshot
+
+**Figure 1:** Network printer configuration on `ACIDC01` using a **Standard TCP/IP Port** with the IP address `192.168.0.1`.
+
+**Figure 2:** **Print and Document Services** role configuration showing **Print Server**, **Internet Printing**, and **LPD Service** enabled on `ACIDC01`.
+
+**Figure 3:** **Print Management** displaying the printers hosted on `ACIDC01`, including queue status, driver version, and driver type.
+
+**Figure 4:** Windows 11 confirming that the shared **Microsoft MS-XPS Class Driver 2** printer hosted on `ACIDC01` was successfully added.
+
+**Figure 5:** Windows 11 **Printers & scanners** displaying the server-hosted printer alongside the locally installed printers.
+
+**Figure 6:** **IIS Internet Printing** interface on `ACIDC01` displaying the shared printer with a **Ready** status.
