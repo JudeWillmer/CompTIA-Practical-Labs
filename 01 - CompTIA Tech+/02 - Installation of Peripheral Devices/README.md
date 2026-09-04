@@ -65,14 +65,12 @@ I successfully installed and managed network devices using **Windows Device Mana
 
 **Figure 1:** Windows **Device Manager** displaying the successfully installed **Microsoft KM-TEST Loopback Adapter** alongside the existing Intel network adapter, confirming that the manually selected device was added to the system.
 
-[SCREENSHOT 1]
+<img width="1918" height="927" alt="01 – Installing Device Drivers" src="https://github.com/user-attachments/assets/ff14a0fa-571c-4470-b26d-933d4bbec53d" />
 
 **Figure 2:** **Driver File Details** for the Microsoft KM-TEST Loopback Adapter displaying the associated Windows driver file, provider information, and **Microsoft Windows** digital signer.
 
-[SCREENSHOT 2]
+<img width="1917" height="930" alt="02 – Installing Device Drivers" src="https://github.com/user-attachments/assets/2537d82f-279e-4567-b746-f165f73b5ca1" />
 
 **Figure 3:** Windows **Device Manager** displaying the restored **Intel(R) 82574L Gigabit Network Connection** after scanning for hardware changes, demonstrating automatic device detection and restoration through Windows **Plug and Play**.
 
-[SCREENSHOT 3]
-
----
+<img width="1918" height="926" alt="03 – Installing Device Drivers" src="https://github.com/user-attachments/assets/874107d7-a062-45fa-a40c-02246709d429" />
