@@ -149,12 +149,24 @@ I successfully configured and managed printing services across Windows 11 and Wi
 
 **Figure 1:** Network printer configuration on `ACIDC01` using a **Standard TCP/IP Port** with the IP address `192.168.0.1`.
 
+<img width="1918" height="927" alt="04 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/ea2f2d56-6812-4db4-ae77-00184c68e50e" />
+
 **Figure 2:** **Print and Document Services** role configuration showing **Print Server**, **Internet Printing**, and **LPD Service** enabled on `ACIDC01`.
+
+<img width="1918" height="927" alt="05 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/5fbd3dcb-2441-4597-a5e5-80140ea4bdbe" />
 
 **Figure 3:** **Print Management** displaying the printers hosted on `ACIDC01`, including queue status, driver version, and driver type.
 
+<img width="1918" height="928" alt="06 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/d2d13267-127e-4ec5-acb0-9c2463eca32d" />
+
 **Figure 4:** Windows 11 confirming that the shared **Microsoft MS-XPS Class Driver 2** printer hosted on `ACIDC01` was successfully added.
+
+<img width="1918" height="891" alt="07 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/6dff2f95-8ab0-4601-ad21-bc0fbb29f545" />
 
 **Figure 5:** Windows 11 **Printers & scanners** displaying the server-hosted printer alongside the locally installed printers.
 
+<img width="1918" height="890" alt="08 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/d748907c-2573-489b-8ae1-114f0e654f49" />
+
 **Figure 6:** **IIS Internet Printing** interface on `ACIDC01` displaying the shared printer with a **Ready** status.
+
+<img width="1918" height="886" alt="09 – Manage Windows Printing Services" src="https://github.com/user-attachments/assets/dfd6f099-dd66-4b6f-84b6-01cae3057a4f" />
